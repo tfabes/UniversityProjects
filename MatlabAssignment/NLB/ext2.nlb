@@ -1,0 +1,11 @@
+BEGIN {
+   RAND 3 3 100 $A
+   PRINT "START"
+   PRINT $A
+   PRINT "REMOVE_COL"
+   RMV $A [ : , 1 : 2 ]
+   PRINT $A
+   RMV $A [ 1 : 2 , : ]
+   PRINT "REMOVE_ROW"
+   PRINT $A
+}

@@ -1,0 +1,20 @@
+BEGIN {
+   SET $A := 5 ;
+   PRINT "INIT"
+   PRINT $A
+   RAND 5 5 100 $A
+   PRINT "RAND"
+   PRINT $A
+   SET $B := $A [ 1 , 1 ] ;
+   PRINT "CELL1"
+   PRINT $B
+   SET $C := $A [ 5 , 5 ] ;
+   PRINT "CELL2"
+   PRINT $C
+   SET $D := $A [ 3 , 3 ] ;
+   PRINT "CELL3"
+   PRINT $D
+   SET $E := $A [ : , : ] 2 B-TIMES ;
+   PRINT "MULTI"
+   PRINT $E
+}

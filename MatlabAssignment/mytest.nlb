@@ -1,0 +1,49 @@
+BEGIN {
+   ONES 5 5 $A
+   READ "testinput.arr" $B
+   PRINT "InputArr"
+   PRINT $B
+   SET $C := $A $B B-GREATER ;
+   PRINT "InvertedInputArr"
+   PRINT $C
+   SET $D := $B $C B-OR ;
+   PRINT "InputORInverted"
+   PRINT $D
+   SET $E := $D $D B-ADD ;
+   SET $E := $E $E B-TIMES $E B-TIMES $E B-TIMES ;
+   PRINT "DoubleDigit"
+   PRINT $E
+   SET $E := $E $B B-TIMES 10 B-TIMES ;
+   PRINT "MixedDigits"
+   PRINT $E
+   SET $E := $E 50 B-LESS ;
+   PRINT "MixedLessThan50"
+   PRINT $E
+   SET $E := $E 0 B-EQUALS ;
+   PRINT "Inverted(==0)"
+   PRINT $E
+   SET $E := 1 ;
+   LOOP $I 2 {
+      LOOP $J 3 {
+         LOOP $K 5 {
+            SET $E := $E 2 B-TIMES ;
+         }
+      }
+   }
+   PRINT "2PowerOf30"
+   PRINT $E
+   PRINT ""
+   READ "testlife.arr" $AA
+   PRINT "LIFE_Glider"
+   PRINT "Seed"
+   PRINT $AA
+   LOOP $I 20 {
+      SET $AB := $AA U-EIGHTCOUNT ;
+      SET $AD := $AB 3 B-EQUALS ;
+      SET $AC := $AB 2 B-EQUALS $AD B-OR $AA B-AND ;
+      SET $AE := $AA U-NOT $AD B-AND $AC B-OR ;
+      PRINT $I
+      PRINT $AE
+      SET $AA := $AE ;
+   }
+}

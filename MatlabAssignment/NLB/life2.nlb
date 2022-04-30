@@ -1,0 +1,18 @@
+BEGIN {
+
+   READ "lglider.arr" $A
+   PRINT $A
+   SET $B := $A U-EIGHTCOUNT ;
+   PRINT $B
+   SET $B := $B U-NOT ;
+   PRINT $B
+   SET $D := $B 3 B-EQUALS ;
+   PRINT $D
+   SET $C := $B 2 B-EQUALS $D B-OR $A B-AND ;
+   PRINT $C
+   SET $E := $A U-NOT $D B-AND $C B-OR ;
+   PRINT $E
+   SET $A := $E ;
+   PRINT $A
+
+}

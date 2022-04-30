@@ -1,0 +1,5 @@
+BEGIN {
+   ONES 3 3 $A
+   ONES 2 2 $B
+   SET $A := $A $B B-AND ;
+}

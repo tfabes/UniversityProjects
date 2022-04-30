@@ -1,0 +1,19 @@
+BEGIN {
+   RAND 3 3 100 $A
+   PRINT "START"
+   PRINT $A
+   PRINT "REMOVE_ROW"
+   RMV $A [ 1 , : ]
+   PRINT $A
+   PRINT "REMOVE_COL"
+   RMV $A [ : , 1 ]
+   PRINT $A
+   RAND 1 1 100 $B
+   SET $A := $A $B B-TIMES ;
+   PRINT "MULTI"
+   PRINT $B
+   PRINT $A
+}
+
+
+

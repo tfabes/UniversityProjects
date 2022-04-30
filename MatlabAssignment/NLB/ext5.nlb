@@ -1,0 +1,8 @@
+BEGIN {
+   RAND 5 5 100 $A
+   PRINT $A
+   SET $B := $A [ 3 : 4 , 1 : 2 ] ;
+   PRINT $B
+   SET $C := $A [ 2 : 5 , 3 : 4 ] ;
+   PRINT $C
+}

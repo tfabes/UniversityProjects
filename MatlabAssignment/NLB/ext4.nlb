@@ -1,0 +1,25 @@
+BEGIN {
+   RAND 4 4 100 $A
+   PRINT "RAND"
+   PRINT $A
+   SET $B := $A [ : , 3 : 4 ] ;
+   PRINT "SUBSET"
+   PRINT $B
+   SET $C := $A [ 3 : 4 , : ] ;
+   PRINT $C
+   SET $D := $A [ 2 , : ] ;
+   SET $E := $A [ : , 2 ] ;
+   PRINT $D
+   PRINT $E
+   SET $F := $A [ 2 , 2 ] ;
+   PRINT $F
+   PRINT ""
+   SET $G := $A [ 2 : 3 , 2 ] ;
+   PRINT $G
+   SET $H := $A [ 2 , 2 : 3 ] ;
+   PRINT "H"
+   PRINT $H
+   SET $I := $A [ 2 : 3 , 2 : 3 ] ;
+   PRINT "I"
+   PRINT $I
+}

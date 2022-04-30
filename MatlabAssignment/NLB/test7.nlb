@@ -1,0 +1,8 @@
+BEGIN {
+   SET $A := 5 ;
+   SET $B := 7 ;
+   SET $C := $A $B B-GREATER ;
+   PRINT $C
+   SET $C := $B $A B-GREATER ;
+   PRINT $C
+}

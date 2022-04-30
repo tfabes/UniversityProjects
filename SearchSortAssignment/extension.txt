@@ -1,0 +1,33 @@
+Extension for Roller Board Exercise
+
+Main functionality
+1 -> Choice of Manual or File input
+2 -> Linked list
+3 -> Updated algorithm
+
+1. Input Choice
+-> User is prompted for choice of input
+   -> Manual input of Height, Width and Grid (row by row)
+   -> File name input as per base exercise
+   -> Invalid input options will abort the program with error message
+-> Verbose option still available as command line argument to print solutions
+
+2. Linked List
+-> Array has been replaced by a linked list
+-> Struct now contains pointer to parent and pointer to next member of list
+-> If new board is not unique, allocated space is cleared before continuing
+
+3. Updated algorithm
+-> Introduced check before adding new board to list
+-> Checks if new board's sum of top row is >= than current board's
+-> If true, adds to linked list; if false, discards and free's alloc'd space
+-> Implemented alongside the unique grid check
+-> Runs much faster than original approach
+-> Can rapidly solve 6x6, 12 move grid:
+
+6 6
+000000
+000000
+111000
+111000
+000000

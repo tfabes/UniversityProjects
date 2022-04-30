@@ -1,0 +1,34 @@
+BEGIN {
+   RAND 5 5 100 $A
+   PRINT "RAND_ARR"
+   PRINT $A
+   RMV $A [ 3 : 5 , :  ]
+   PRINT "BottomThreeRowsRemoved"
+   PRINT $A
+   RMV $A [ : , 1 : 2 ]
+   PRINT "LeftHandTwoColsRemoved"
+   PRINT $A
+   SET $B := $A [ 2 , 3 ] ;
+   PRINT "IndexedBottomRightCell"
+   PRINT $B
+   PRINT ""
+   RAND 5 5 100 $A
+   PRINT "New_RAND_ARR"
+   PRINT $A
+   SET $B := $A [ 2 : 4 , 2 : 4 ] 2 B-TIMES ;
+   PRINT "CentreOfArrayTimesByTwo"
+   PRINT $B
+   RAND 5 5 100 $A
+   RAND 5 5 100 $B
+   PRINT "TWO_NEW_RAND_ARRAYS"
+   PRINT "A:"
+   PRINT $A
+   PRINT "B:"
+   PRINT $B
+   SET $C := $A [ 2 : 4 , 2 : 4 ] $B [ 1 : 3 , 1 : 3 ] B-GREATER ;
+   PRINT "3x3BoolArrayComparing..."
+   PRINT "CentreOf1stArrayWith..."
+   PRINT "TopLeftOf2ndArray..."
+   PRINT "Using_B-GREATER_(A>B)"
+   PRINT $C
+}

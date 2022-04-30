@@ -1,0 +1,17 @@
+BEGIN {
+   SET $A := 1 ;
+   SET $B := 2 ;
+   SET $C := 3 ;
+   LOOP $I 4 {
+      LOOP $J 3 {
+         LOOP $K 2 {
+            LOOP $L 1 {
+               PRINT "L_LOOP"
+            }
+            PRINT "K_LOOP"
+         }   
+         PRINT "J_LOOP"
+      }
+      PRINT "I_LOOP"
+   }
+}
